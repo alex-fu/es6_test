@@ -1,4 +1,4 @@
-import { println } from './println';
+import println from './println';
 
 let [a, b, c] = [1, 2, 3];
 println(a, b, c)
@@ -140,8 +140,6 @@ function* fibs() {
     for (let [key, value] of m) {
       println(key + ' = ' + value);
     }
-//    let m1 = m.map( ([k, v]) => k );
-//    println(m1)
   }
 
 }

@@ -1,3 +1,5 @@
+import println from './println';
+
 var cart = {
   _wheels: 4,
 
@@ -13,7 +15,7 @@ var cart = {
   }
 }
 
-console.log(cart.wheels)
+println(cart.wheels)
 cart.wheels = 7;
-console.log(cart.wheels)
+println(cart.wheels)
 

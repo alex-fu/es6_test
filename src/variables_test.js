@@ -35,7 +35,9 @@ console.log('===================')
 console.log('===================')
 function f() { console.log('I am outside'); }
 {
-  if (false) {
+  if (true) {
+      console.log("inside");
+      f();
     function f() { console.log('I am inside'); }  // don't write these code, use `let f = function() { console.log('I am inside') }` instead. Because define function inside block will cause undefined result in web browsers
   }
 
@@ -46,8 +48,8 @@ console.log('===================')
 
 {
   const foo = Object.freeze({})
-  foo.props = 123;
-  console.log(foo.props) // print 'undefined', means `foo.props = 123` didn't execute
+  // foo.props = 123;
+  // console.log(foo.props) // print 'undefined', means `foo.props = 123` didn't execute
 }
 
 console.log('===================')
@@ -72,7 +74,7 @@ var constantize = (obj) => {
 
   constantize(a)
 
-  a.name = "cannot change name111";
+  // a.name = "cannot change name111";
   console.log('name: ' + a.name) // will output 'changedname111', because a is const
 }
 

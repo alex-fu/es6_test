@@ -8,7 +8,7 @@ var println = function(...args) { args.forEach( arg => {
 export {println}
 */
 
-export function println(...args) {
+export default function println(...args) {
   args.forEach( arg => {
     console.log(arg);
   })
